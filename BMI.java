@@ -198,22 +198,14 @@ public class BMI {
 
                 bminumber.setText(result);
 
-                if (c < 16)
-                    categorynumber.setText("Severe thinness");
-                else if (c >= 16 && c <= 16.9)
-                    categorynumber.setText("Moderate thinness");
-                else if (c >= 17 && c <= 18.4)
-                    categorynumber.setText("Mild thinness");
-                else if (c >= 18.5 && c <= 24.9)
-                    categorynumber.setText("Normal Range");
-                else if (c >= 25 && c <= 29.9)
-                    categorynumber.setText("Over Weight");
-                else if (c >= 30 && c <= 34.9)
-                    categorynumber.setText("Class 1");
-                else if (c >= 35 && c <= 39.9)
-                    categorynumber.setText("Class 2");
-                else if (c >= 40)
-                    categorynumber.setText("Class 3");
+                if (c < 16) categorynumber.setText("Severe thinness");
+                else if (c >= 16 && c <= 16.9) categorynumber.setText("Moderate thinness");
+                else if (c >= 17 && c <= 18.4) categorynumber.setText("Mild thinness");
+                else if (c >= 18.5 && c <= 24.9) categorynumber.setText("Normal Range");
+                else if (c >= 25 && c <= 29.9) categorynumber.setText("Over Weight");
+                else if (c >= 30 && c <= 34.9) categorynumber.setText("Class 1");
+                else if (c >= 35 && c <= 39.9) categorynumber.setText("Class 2");
+                else if (c >= 40) categorynumber.setText("Class 3");
             }
         });
 
