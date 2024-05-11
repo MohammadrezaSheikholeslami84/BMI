@@ -84,81 +84,6 @@ public class BMI {
         Category_number.setForeground(Color.WHITE);
         Category_number.setFont(new Font("Arial", Font.BOLD, 20));
 
-        // Age label in page 3 :
-        JLabel AgeLabel = new JLabel();
-        AgeLabel.setBounds(20, 20, 200, 80);
-        AgeLabel.setForeground(Color.black);
-        AgeLabel.setText("Enter Age : ");
-        AgeLabel.setFont(new Font("Arial", Font.BOLD, 15));
-
-        // Age text field in page 3 :
-        JTextField Age_text_field = new JTextField();
-        Age_text_field.setBounds(120, 45, 150, 30);
-
-        // Gender Label in page 3 :
-        JLabel Gender_label = new JLabel();
-        Gender_label.setBounds(20, 100, 200, 80);
-        Gender_label.setForeground(Color.black);
-        Gender_label.setText("Enter Gender :");
-        Gender_label.setFont(new Font("Arial", Font.BOLD, 15));
-
-        // Gender Radio Button in page 3 :
-        JRadioButton male = new JRadioButton("A) Male");
-        male.setBounds(150, 100, 100, 30);
-        male.setFocusable(false);
-
-        JRadioButton female = new JRadioButton("B) Female");
-        female.setFocusable(false);
-        female.setBounds(150, 150, 100, 30);
-
-        ButtonGroup buttongroup = new ButtonGroup();
-        buttongroup.add(male);
-        buttongroup.add(female);
-
-        // Fat Percent Label in page 3 :
-        JLabel Fat_percent_label = new JLabel();
-        Fat_percent_label.setBounds(20, 350, 150, 20);
-        Fat_percent_label.setText("Fat Percent : ");
-        Fat_percent_label.setForeground(new Color(86, 5, 15));
-        Fat_percent_label.setFont(new Font("Arial", Font.BOLD, 20));
-
-        // Fat Percent Number in page 3 :
-        JLabel Fat_percent_number = new JLabel();
-        Fat_percent_number.setBounds(150, 350, 150, 20);
-        Fat_percent_number.setForeground(Color.white);
-        Fat_percent_number.setFont(new Font("Arial", Font.BOLD, 20));
-
-        // Button Calculate in page 3 :
-        JButton calculate2 = new JButton("Calculate !");
-        calculate2.setBounds(100, 250, 100, 50);
-        calculate2.setFont(new Font("Arial", Font.BOLD, 12));
-        calculate2.setFocusable(false);
-        calculate2.setBackground(Color.cyan);
-        calculate2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String agestr = Age_text_field.getText();
-                String bmistr = BMI_number.getText();
-                float age = Float.valueOf(agestr);
-                float bmi = Float.valueOf(bmistr);
-                float ans = 0;
-                if (male.isSelected()) {
-                    float agenew = (float) ((0.23 * age) - 16.2);
-                    ans = (float) ((1.2 * bmi) + agenew);
-                    ans = Float.parseFloat(decfor.format(ans));
-                }
-                if (female.isSelected()) {
-                    float agenew = (float) ((0.23 * age) - 5.4);
-                    ans = (float) ((1.2 * bmi) + agenew);
-                    ans = Float.parseFloat(decfor.format(ans));
-                }
-                String result = String.valueOf(ans);
-
-                Fat_percent_number.setText(result);
-
-            }
-        });
-
         // Height label in page 2 :
         JLabel Height_label = new JLabel();
         Height_label.setBounds(20, 20, 200, 80);
@@ -245,6 +170,81 @@ public class BMI {
                 page1.setVisible(false);
                 page2.setVisible(false);
                 page3.setVisible(true);
+
+            }
+        });
+
+        // Age label in page 3 :
+        JLabel AgeLabel = new JLabel();
+        AgeLabel.setBounds(20, 20, 200, 80);
+        AgeLabel.setForeground(Color.black);
+        AgeLabel.setText("Enter Age : ");
+        AgeLabel.setFont(new Font("Arial", Font.BOLD, 15));
+
+        // Age text field in page 3 :
+        JTextField Age_text_field = new JTextField();
+        Age_text_field.setBounds(120, 45, 150, 30);
+
+        // Gender Label in page 3 :
+        JLabel Gender_label = new JLabel();
+        Gender_label.setBounds(20, 100, 200, 80);
+        Gender_label.setForeground(Color.black);
+        Gender_label.setText("Enter Gender :");
+        Gender_label.setFont(new Font("Arial", Font.BOLD, 15));
+
+        // Gender Radio Button in page 3 :
+        JRadioButton male = new JRadioButton("A) Male");
+        male.setBounds(150, 100, 100, 30);
+        male.setFocusable(false);
+
+        JRadioButton female = new JRadioButton("B) Female");
+        female.setFocusable(false);
+        female.setBounds(150, 150, 100, 30);
+
+        ButtonGroup buttongroup = new ButtonGroup();
+        buttongroup.add(male);
+        buttongroup.add(female);
+
+        // Fat Percent Label in page 3 :
+        JLabel Fat_percent_label = new JLabel();
+        Fat_percent_label.setBounds(20, 350, 150, 20);
+        Fat_percent_label.setText("Fat Percent : ");
+        Fat_percent_label.setForeground(new Color(86, 5, 15));
+        Fat_percent_label.setFont(new Font("Arial", Font.BOLD, 20));
+
+        // Fat Percent Number in page 3 :
+        JLabel Fat_percent_number = new JLabel();
+        Fat_percent_number.setBounds(150, 350, 150, 20);
+        Fat_percent_number.setForeground(Color.white);
+        Fat_percent_number.setFont(new Font("Arial", Font.BOLD, 20));
+
+        // Button Calculate in page 3 :
+        JButton calculate2 = new JButton("Calculate !");
+        calculate2.setBounds(100, 250, 100, 50);
+        calculate2.setFont(new Font("Arial", Font.BOLD, 12));
+        calculate2.setFocusable(false);
+        calculate2.setBackground(Color.cyan);
+        calculate2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String agestr = Age_text_field.getText();
+                String bmistr = BMI_number.getText();
+                float age = Float.valueOf(agestr);
+                float bmi = Float.valueOf(bmistr);
+                float ans = 0;
+                if (male.isSelected()) {
+                    float agenew = (float) ((0.23 * age) - 16.2);
+                    ans = (float) ((1.2 * bmi) + agenew);
+                    ans = Float.parseFloat(decfor.format(ans));
+                }
+                if (female.isSelected()) {
+                    float agenew = (float) ((0.23 * age) - 5.4);
+                    ans = (float) ((1.2 * bmi) + agenew);
+                    ans = Float.parseFloat(decfor.format(ans));
+                }
+                String result = String.valueOf(ans);
+
+                Fat_percent_number.setText(result);
 
             }
         });
