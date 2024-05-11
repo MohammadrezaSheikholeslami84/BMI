@@ -30,18 +30,19 @@ public class BMI {
         page3.setVisible(false);
 
         // InfoText in page 1 :
-        JLabel LabelText = new JLabel();
-        LabelText.setBounds(20, 20, 100, 50);
-        LabelText.setForeground(Color.black);
-        LabelText.setText("BMI Calculator");
+        JLabel InfoText = new JLabel();
+        InfoText.setBounds(20, 20, 100, 50);
+        InfoText.setForeground(Color.black);
+        InfoText.setText("BMI Calculator");
 
         // Button Start in page 1 :
-        JButton buttonpanel1 = new JButton("Start ");
-        buttonpanel1.setBounds(130, 20, 100, 50);
-        buttonpanel1.setFont(new Font("Arial", Font.BOLD, 12));
-        buttonpanel1.setForeground(Color.WHITE);
-        buttonpanel1.setBackground(new Color(43, 34, 186));
-        buttonpanel1.addActionListener(new ActionListener() {
+        JButton StartButton = new JButton("Start ");
+        StartButton.setBounds(130, 20, 100, 50);
+        StartButton.setFont(new Font("Arial", Font.BOLD, 12));
+        StartButton.setFocusable(false);
+        StartButton.setForeground(Color.WHITE);
+        StartButton.setBackground(new Color(43, 34, 186));
+        StartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 f.setSize(500, 500);
@@ -58,82 +59,86 @@ public class BMI {
         information.setText("This App Calculate Body Mass Index");
 
         // BMI Label in page 2 :
-        JLabel bmilabel = new JLabel();
-        bmilabel.setBounds(20, 250, 150, 20);
-        bmilabel.setText("BMI : ");
-        bmilabel.setForeground(new Color(166, 8, 26));
-        bmilabel.setFont(new Font("Arial", Font.BOLD, 20));
+        JLabel BMILabel = new JLabel();
+        BMILabel.setBounds(20, 250, 150, 20);
+        BMILabel.setText("BMI : ");
+        BMILabel.setForeground(new Color(86, 5, 15));
+        BMILabel.setFont(new Font("Arial", Font.BOLD, 20));
 
         // BMI Number in page 2 :
-        JLabel bminumber = new JLabel();
-        bminumber.setBounds(100, 250, 150, 20);
-        bminumber.setForeground(Color.WHITE);
-        bminumber.setFont(new Font("Arial", Font.BOLD, 20));
+        JLabel BMI_number = new JLabel();
+        BMI_number.setBounds(100, 250, 150, 20);
+        BMI_number.setForeground(Color.WHITE);
+        BMI_number.setFont(new Font("Arial", Font.BOLD, 20));
 
         // Category Label in page 2 :
-        JLabel categorylabel = new JLabel();
-        categorylabel.setBounds(20, 280, 200, 80);
-        categorylabel.setText("Category : ");
-        categorylabel.setForeground(new Color(166, 8, 26));
-        categorylabel.setFont(new Font("Arial", Font.BOLD, 20));
+        JLabel CategoryLabel = new JLabel();
+        CategoryLabel.setBounds(20, 280, 200, 80);
+        CategoryLabel.setText("Category : ");
+        CategoryLabel.setForeground(new Color(86, 5, 15));
+        CategoryLabel.setFont(new Font("Arial", Font.BOLD, 20));
 
         // Category Number in page 2 :
-        JLabel categorynumber = new JLabel();
-        categorynumber.setBounds(150, 280, 200, 80);
-        categorynumber.setForeground(Color.WHITE);
-        categorynumber.setFont(new Font("Arial", Font.BOLD, 20));
+        JLabel Category_number = new JLabel();
+        Category_number.setBounds(150, 280, 200, 80);
+        Category_number.setForeground(Color.WHITE);
+        Category_number.setFont(new Font("Arial", Font.BOLD, 20));
 
         // Age label in page 3 :
-        JLabel agelabel = new JLabel();
-        agelabel.setBounds(20, 20, 200, 80);
-        agelabel.setForeground(Color.black);
-        agelabel.setText("Enter Age : ");
-        agelabel.setFont(new Font("Arial", Font.BOLD, 15));
+        JLabel AgeLabel = new JLabel();
+        AgeLabel.setBounds(20, 20, 200, 80);
+        AgeLabel.setForeground(Color.black);
+        AgeLabel.setText("Enter Age : ");
+        AgeLabel.setFont(new Font("Arial", Font.BOLD, 15));
 
-        // Age textfireld in page 3 :
-        JTextField agetextfield = new JTextField();
-        agetextfield.setBounds(120, 45, 150, 30);
+        // Age text field in page 3 :
+        JTextField Age_text_field = new JTextField();
+        Age_text_field.setBounds(120, 45, 150, 30);
 
         // Gender Label in page 3 :
-        JLabel genderlabel = new JLabel();
-        genderlabel.setBounds(20, 100, 200, 80);
-        genderlabel.setForeground(Color.black);
-        genderlabel.setText("Enter Gender :");
-        genderlabel.setFont(new Font("Arial", Font.BOLD, 15));
+        JLabel Gender_label = new JLabel();
+        Gender_label.setBounds(20, 100, 200, 80);
+        Gender_label.setForeground(Color.black);
+        Gender_label.setText("Enter Gender :");
+        Gender_label.setFont(new Font("Arial", Font.BOLD, 15));
 
         // Gender Radio Button in page 3 :
         JRadioButton male = new JRadioButton("A) Male");
-        JRadioButton female = new JRadioButton("B) Female");
         male.setBounds(150, 100, 100, 30);
+        male.setFocusable(false);
+
+        JRadioButton female = new JRadioButton("B) Female");
+        female.setFocusable(false);
         female.setBounds(150, 150, 100, 30);
 
         ButtonGroup buttongroup = new ButtonGroup();
         buttongroup.add(male);
         buttongroup.add(female);
 
-        // FatIndex Label in page 3 :
-        JLabel FatIndexLabel = new JLabel();
-        FatIndexLabel.setBounds(20, 350, 150, 20);
-        FatIndexLabel.setText("Fat Percent : ");
-        FatIndexLabel.setForeground(new Color(166, 8, 26));
-        FatIndexLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        // Fat Percent Label in page 3 :
+        JLabel Fat_percent_label = new JLabel();
+        Fat_percent_label.setBounds(20, 350, 150, 20);
+        Fat_percent_label.setText("Fat Percent : ");
+        Fat_percent_label.setForeground(new Color(86, 5, 15));
+        Fat_percent_label.setFont(new Font("Arial", Font.BOLD, 20));
 
-        // FatIndex Number in page 3 :
-        JLabel FatIndexnumber = new JLabel();
-        FatIndexnumber.setBounds(150, 350, 150, 20);
-        FatIndexnumber.setForeground(Color.white);
-        FatIndexnumber.setFont(new Font("Arial", Font.BOLD, 20));
+        // Fat Percent Number in page 3 :
+        JLabel Fat_percent_number = new JLabel();
+        Fat_percent_number.setBounds(150, 350, 150, 20);
+        Fat_percent_number.setForeground(Color.white);
+        Fat_percent_number.setFont(new Font("Arial", Font.BOLD, 20));
 
         // Button Calculate in page 3 :
         JButton calculate2 = new JButton("Calculate !");
         calculate2.setBounds(100, 250, 100, 50);
         calculate2.setFont(new Font("Arial", Font.BOLD, 12));
+        calculate2.setFocusable(false);
         calculate2.setBackground(Color.cyan);
         calculate2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String agestr = agetextfield.getText();
-                String bmistr = bminumber.getText();
+                String agestr = Age_text_field.getText();
+                String bmistr = BMI_number.getText();
                 float age = Float.valueOf(agestr);
                 float bmi = Float.valueOf(bmistr);
                 float ans = 0;
@@ -149,70 +154,72 @@ public class BMI {
                 }
                 String result = String.valueOf(ans);
 
-                FatIndexnumber.setText(result);
+                Fat_percent_number.setText(result);
 
             }
         });
 
-        // Hight label in page 2 :
-        JLabel labelhight = new JLabel();
-        labelhight.setBounds(20, 20, 200, 80);
-        labelhight.setForeground(Color.black);
-        labelhight.setText("Enter Height(cm) : ");
-        labelhight.setFont(new Font("Arial", Font.BOLD, 15));
+        // Height label in page 2 :
+        JLabel Height_label = new JLabel();
+        Height_label.setBounds(20, 20, 200, 80);
+        Height_label.setForeground(Color.black);
+        Height_label.setText("Enter Height (cm) : ");
+        Height_label.setFont(new Font("Arial", Font.BOLD, 15));
 
         // Weight label in page 2 :
-        JLabel labelweight = new JLabel();
-        labelweight.setBounds(20, 70, 200, 80);
-        labelweight.setForeground(Color.black);
-        labelweight.setText("Enter Weight(Kg) : ");
-        labelweight.setFont(new Font("Arial", Font.BOLD, 15));
+        JLabel Weight_label = new JLabel();
+        Weight_label.setBounds(20, 70, 200, 80);
+        Weight_label.setForeground(Color.black);
+        Weight_label.setText("Enter Weight (Kg) : ");
+        Weight_label.setFont(new Font("Arial", Font.BOLD, 15));
 
-        // Hight textfield in page 2 :
-        JTextField hightfield = new JTextField();
-        hightfield.setBounds(170, 45, 150, 30);
+        // Height textfield in page 2 :
+        JTextField Height_text_field = new JTextField();
+        Height_text_field.setBounds(170, 45, 150, 30);
 
         // Weight textfield in page 2 :
-        JTextField weightfield = new JTextField();
-        weightfield.setBounds(170, 95, 150, 30);
+        JTextField Weight_text_field = new JTextField();
+        Weight_text_field.setBounds(170, 95, 150, 30);
 
         // Button Calculate in page 2 :
         JButton calculate = new JButton("Calculate !");
         calculate.setBounds(100, 150, 100, 50);
         calculate.setFont(new Font("Arial", Font.BOLD, 12));
+        calculate.setFocusable(false);
         calculate.setBackground(Color.cyan);
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String s1 = hightfield.getText();
-                String s2 = weightfield.getText();
-                float a = Float.valueOf(s1);
-                float b = Float.valueOf(s2);
-                float c = 0;
+                String height_str = Height_text_field.getText();
+                String weight_str = Weight_text_field.getText();
+                float height = Float.valueOf(height_str);
+                float weight = Float.valueOf(weight_str);
+                float answer = 0;
                 if (e.getSource() == calculate) {
-                    a /= 100;
-                    c = (float) (b / Math.pow(a, 2));
-                    c = Float.parseFloat(decfor.format(c));
+                    height /= 100;
+                    answer = (float) (weight / Math.pow(height, 2));
+                    answer = Float.parseFloat(decfor.format(answer));
                 }
-                String result = String.valueOf(c);
+                String result = String.valueOf(answer);
 
-                bminumber.setText(result);
+                BMI_number.setText(result);
 
-                if (c < 16) categorynumber.setText("Severe thinness");
-                else if (c >= 16 && c <= 16.9) categorynumber.setText("Moderate thinness");
-                else if (c >= 17 && c <= 18.4) categorynumber.setText("Mild thinness");
-                else if (c >= 18.5 && c <= 24.9) categorynumber.setText("Normal Range");
-                else if (c >= 25 && c <= 29.9) categorynumber.setText("Over Weight");
-                else if (c >= 30 && c <= 34.9) categorynumber.setText("Class 1");
-                else if (c >= 35 && c <= 39.9) categorynumber.setText("Class 2");
-                else if (c >= 40) categorynumber.setText("Class 3");
+                if (answer < 16) Category_number.setText("Severe thinness");
+                else if (answer >= 16 && answer <= 16.9) Category_number.setText("Moderate thinness");
+                else if (answer >= 17 && answer <= 18.4) Category_number.setText("Mild thinness");
+                else if (answer >= 18.5 && answer <= 24.9) Category_number.setText("Normal Range");
+                else if (answer >= 25 && answer <= 29.9) Category_number.setText("Over Weight");
+                else if (answer >= 30 && answer <= 34.9) Category_number.setText("Class 1");
+                else if (answer >= 35 && answer <= 39.9) Category_number.setText("Class 2");
+                else if (answer >= 40) Category_number.setText("Class 3");
             }
         });
 
-        // Button Next Page in page 2 :
+        // Back Button in page 2 :
         JButton back1 = new JButton("Back");
         back1.setBounds(200, 150, 100, 50);
         back1.setFont(new Font("Arial", Font.BOLD, 12));
+        back1.setFocusable(false);
         back1.setBackground(new Color(51, 131, 156));
         back1.addActionListener(new ActionListener() {
             @Override
@@ -225,10 +232,11 @@ public class BMI {
             }
         });
 
-        // Button Next Page in page 2 :
+        //  Next Page Button in page 2 :
         Button nextpage = new Button("Next Page");
         nextpage.setBounds(300, 150, 100, 50);
         nextpage.setFont(new Font("Arial", Font.BOLD, 12));
+        nextpage.setFocusable(false);
         nextpage.setBackground(new Color(51, 131, 156));
         nextpage.addActionListener(new ActionListener() {
             @Override
@@ -241,11 +249,12 @@ public class BMI {
             }
         });
 
-        // Button Back in page 3 :
+        // Back Button in page 3 :
         JButton back2 = new JButton("Back");
         back2.setBounds(200, 250, 100, 50);
         back2.setFont(new Font("Arial", Font.BOLD, 12));
         back2.setBackground(new Color(51, 131, 156));
+        back2.setFocusable(false);
         back2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -257,19 +266,19 @@ public class BMI {
             }
         });
 
-        page1.add(LabelText);
-        page1.add(buttonpanel1);
+        page1.add(InfoText);
+        page1.add(StartButton);
         page1.add(information);
 
-        page2.add(labelhight);
-        page2.add(hightfield);
-        page2.add(labelweight);
-        page2.add(weightfield);
+        page2.add(Height_label);
+        page2.add(Height_text_field);
+        page2.add(Weight_label);
+        page2.add(Weight_text_field);
 
-        page2.add(bmilabel);
-        page2.add(bminumber);
-        page2.add(categorylabel);
-        page2.add(categorynumber);
+        page2.add(BMILabel);
+        page2.add(BMI_number);
+        page2.add(CategoryLabel);
+        page2.add(Category_number);
         page2.add(calculate);
         page2.add(back1);
         page2.add(nextpage);
@@ -278,11 +287,11 @@ public class BMI {
         page3.add(female);
         page3.add(back2);
         page3.add(calculate2);
-        page3.add(agetextfield);
-        page3.add(agelabel);
-        page3.add(FatIndexnumber);
-        page3.add(FatIndexLabel);
-        page3.add(genderlabel);
+        page3.add(Age_text_field);
+        page3.add(AgeLabel);
+        page3.add(Fat_percent_number);
+        page3.add(Fat_percent_label);
+        page3.add(Gender_label);
 
         f.add(page1);
         f.add(page2);
