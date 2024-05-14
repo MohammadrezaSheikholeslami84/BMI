@@ -1,11 +1,4 @@
-# BMI
  
-![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/ad5730c6-918f-4850-b6ce-87f3e753b9e5)
-
-![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/c3ad0d8e-e6d7-4742-af12-31469b4e8394)
-
-![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/14718abe-b002-49a6-955c-3b68045f6b55)
-
 # BMI Calculator
 
 This is a simple Java application that calculates Body Mass Index (BMI) and Body Fat Percentage using a graphical user interface (GUI) built with Swing.
@@ -19,13 +12,13 @@ This is a simple Java application that calculates Body Mass Index (BMI) and Body
 ## Screenshots
 
 ### Welcome Page
-![Welcome Page](screenshots/welcome_page.png)
+![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/ad5730c6-918f-4850-b6ce-87f3e753b9e5)
 
 ### BMI Calculation Page
-![BMI Calculation Page](screenshots/bmi_calculation_page.png)
+![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/c3ad0d8e-e6d7-4742-af12-31469b4e8394)
 
 ### Body Fat Percentage Calculation Page
-![Body Fat Percentage Calculation Page](screenshots/body_fat_percentage_page.png)
+![image](https://github.com/MohammadrezaSheikholeslami84/BMI/assets/166950228/14718abe-b002-49a6-955c-3b68045f6b55)
 
 ## Installation
 
