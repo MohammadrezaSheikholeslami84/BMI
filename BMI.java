@@ -11,33 +11,35 @@ public class BMI {
 
         // Page 1:
         JPanel page1 = new JPanel();
-        page1.setBounds(0, 0, 300, 300);
+        page1.setSize(700, 900);
         page1.setBackground(Color.WHITE);
         page1.setLayout(null);
 
         // Page 2:
         JPanel page2 = new JPanel();
-        page2.setBounds(0, 0, 500, 500);
+        page2.setSize(700, 900);
         page2.setBackground(Color.gray);
         page2.setLayout(null);
         page2.setVisible(false);
 
         // Page 3:
         JPanel page3 = new JPanel();
-        page3.setBounds(0, 0, 500, 500);
+        page3.setSize(700, 900);
+
         page3.setBackground(Color.gray);
         page3.setLayout(null);
         page3.setVisible(false);
 
         // InfoText in page 1 :
         JLabel InfoText = new JLabel();
-        InfoText.setBounds(20, 20, 100, 50);
+        InfoText.setBounds(200, 20, 150, 100);
         InfoText.setForeground(Color.black);
         InfoText.setText("BMI Calculator");
+        InfoText.setFont(new Font("Arial",Font.BOLD,20));
 
         // Button Start in page 1 :
         JButton StartButton = new JButton("Start ");
-        StartButton.setBounds(130, 20, 100, 50);
+        StartButton.setBounds(360, 40, 100, 50);
         StartButton.setFont(new Font("Arial", Font.BOLD, 12));
         StartButton.setFocusable(false);
         StartButton.setForeground(Color.WHITE);
@@ -45,7 +47,7 @@ public class BMI {
         StartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                f.setSize(500, 500);
+                f.setSize(700, 900);
                 page1.setVisible(false);
                 page2.setVisible(true);
                 page3.setVisible(false);
@@ -54,9 +56,10 @@ public class BMI {
 
         // Information Label in page 1 :
         JLabel information = new JLabel();
-        information.setBounds(20, 80, 500, 100);
+        information.setBounds(150, 550, 500, 100);
         information.setForeground(Color.black);
         information.setText("This App Calculate Body Mass Index");
+        information.setFont(new Font("Arial",Font.BOLD,20));
 
         // BMI Label in page 2 :
         JLabel BMILabel = new JLabel();
@@ -129,14 +132,32 @@ public class BMI {
 
                 BMI_number.setText(result);
 
-                if (answer < 16) Category_number.setText("Severe thinness");
-                else if (answer >= 16 && answer <= 16.9) Category_number.setText("Moderate thinness");
-                else if (answer >= 17 && answer <= 18.4) Category_number.setText("Mild thinness");
-                else if (answer >= 18.5 && answer <= 24.9) Category_number.setText("Normal Range");
-                else if (answer >= 25 && answer <= 29.9) Category_number.setText("Over Weight");
-                else if (answer >= 30 && answer <= 34.9) Category_number.setText("Class 1");
-                else if (answer >= 35 && answer <= 39.9) Category_number.setText("Class 2");
-                else if (answer >= 40) Category_number.setText("Class 3");
+                if (answer < 18.5)  {
+                    Category_number.setText("Under Weight");
+                    Category_number.setForeground(new Color(6, 119, 159));
+                }
+
+                else if (answer >= 18.5 && answer <= 24.9) {
+                    Category_number.setText("Normal Weight");
+                    Category_number.setForeground(new Color(6, 180, 121));
+                }
+                else if (answer >= 25 && answer <= 29.9) {
+
+                    Category_number.setText("Over Weight");
+                    Category_number.setForeground(new Color(255, 206, 96));
+                }
+                else if (answer >= 30 && answer <= 34.9) {
+                    Category_number.setText("Class 1");
+                    Category_number.setForeground(new Color(236, 165, 17));
+                }
+                else if (answer >= 35 && answer <= 39.9) {
+                    Category_number.setText("Class 2");
+                    Category_number.setForeground(new Color(232, 121, 6));
+                }
+                else {
+                    Category_number.setText("Class 3");
+                    Category_number.setForeground(new Color(208, 5, 90));
+                }
             }
         });
 
@@ -149,7 +170,7 @@ public class BMI {
         back1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                f.setSize(300, 300);
+                f.setSize(700, 900);
                 page1.setVisible(true);
                 page2.setVisible(false);
                 page3.setVisible(false);
@@ -166,13 +187,14 @@ public class BMI {
         nextpage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                f.setSize(500, 500);
+                f.setSize(700, 900);
                 page1.setVisible(false);
                 page2.setVisible(false);
                 page3.setVisible(true);
 
             }
         });
+
 
         // Age label in page 3 :
         JLabel AgeLabel = new JLabel();
@@ -258,7 +280,7 @@ public class BMI {
         back2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                f.setSize(500, 500);
+                f.setSize(700, 900);
                 page1.setVisible(false);
                 page2.setVisible(true);
                 page3.setVisible(false);
@@ -266,9 +288,26 @@ public class BMI {
             }
         });
 
+//        JLabel new_label = new JLabel(" BYE");
+//        new_label.setBounds(100, 100, 100, 100);
+//        new_label.setFont(new Font("Arial",Font.BOLD,16));
+//        new_label.setForeground(Color.white);
+
+        ImageIcon imagebmi = new ImageIcon("bmi.jpg");
+        JLabel BackGroundimagebmi  = new JLabel("", imagebmi, JLabel.CENTER);
+        BackGroundimagebmi.setBounds(20, 20, 700, 500);
+
         page1.add(InfoText);
         page1.add(StartButton);
         page1.add(information);
+        page1.add(BackGroundimagebmi);
+//        page1.add(jfield);
+        //  page1.add(jbutton);
+
+
+        ImageIcon categoryimage = new ImageIcon("bmi.jpeg");
+        JLabel BackGroundcategoryimage  = new JLabel("", categoryimage, JLabel.CENTER);
+        BackGroundcategoryimage.setBounds(0, 0, 675, 1100);
 
         page2.add(Height_label);
         page2.add(Height_text_field);
@@ -282,6 +321,7 @@ public class BMI {
         page2.add(calculate);
         page2.add(back1);
         page2.add(nextpage);
+        page2.add(BackGroundcategoryimage);
 
         page3.add(male);
         page3.add(female);
@@ -292,12 +332,13 @@ public class BMI {
         page3.add(Fat_percent_number);
         page3.add(Fat_percent_label);
         page3.add(Gender_label);
+//        page3.add(new_label);
 
         f.add(page1);
         f.add(page2);
         f.add(page3);
 
-        f.setSize(300, 300);
+        f.setSize(700, 900);
         f.setLayout(null);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
